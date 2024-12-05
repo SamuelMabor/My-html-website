@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography of Annet Iseren </title>
+    <style>
+<style>
+    /* Header Styling */
+    header {
+        background: linear-gradient(45deg, #0d47a1, #1976d2);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        border-bottom: 5px solid #333;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #ffffff;
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        transition: all 0.5s ease-in-out;
+        background: linear-gradient(45deg, #fff, #ffd700);
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    /* Hover Effect for Title */
+    header h1:hover {
+        transform: scale(1.1);
+        color: #0d47a1;
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(45deg, #0d47a1, #1976d2);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #333;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background: #1976d2;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #0d47a1;
+            color: #ffd700;
+            transform: scale(1.1);
+        }
+
+        /* Flex Layout for Achievements and Contributions */
+        .achievements-contributions {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 1.5rem;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        section {
+            flex: 1;
+            min-width: 45%;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideIn 1s forwards;
+        }
+
+        section:nth-child(even) {
+            background: #f3f3f3;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0d47a1;
+        }
+
+        /* Profile Image Styling */
+        .profile-image {
+            display: block;
+            width: 250px;
+            height: auto;
+            margin: 1rem auto;
+            border-radius: 50%;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video Container Styling */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        video {
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button Styling */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0d47a1;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: none; /* Initially hidden */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #1565c0;
+            color: #ffd700;
+            transform: translateY(-5px);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #0d47a1;
+            color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            border-top: 3px solid #333;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Scroll Effects */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+       
+       
+.contact-info {
+        padding: 2rem;
+        background: #f0f4f8;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+    
+    .contact-info h2 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-item h3 {
+        font-size: 1.5rem;
+        color: #0d47a1;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .contact-item a {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    .contact-item a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-item ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .contact-item ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+        .contact-card {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    </style>
+</head>
+<body id="top">
+
+    <!-- Header -->
+    <header>
+        <h1>Biography of Mrs. Annet Iseren</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="Participants.html">Home</a>
+        <a href="#background">Background</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#KeyContributions">Contributions</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Background Section -->
+    <section id="background">
+        <h2>Background</h2>
+        <img src="Annet.JPEG" alt="Annet Iseren" class="profile-image">
+        <p>
+Iseren Annet iam 32-year-old Ugandan pursuing a diploma in Information Technology at Victoria University, demonstrating a commitment to enhancing my skills and contributing to the technological landscape in Uganda..</p>
+    </section>
+
+    <!-- Achievements Section -->
+    <div class="achievements-contributions">
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <p>My Achievements:</p>
+            <ul>
+                <li>Uganda certificate of education
+
+</li>
+                <li>Uganda advanced certificate of education.</li>
+                <li>Uganda diploma in business studies
+</li>
+
+            </ul>
+        </section>
+
+        <!-- Contributions Section -->
+        <section id="contributions">
+            <h2>Key Contributions</h2>
+            <p>My Contributions:</p>
+            <ul>
+                <li>As a free web hoster, I have contributed by providing reliable hosting services that ensure our web development website remains accessible and efficient.
+</li>
+                <li>Additionally, I have implemented user-friendly interfaces to enhance the overall experience for developers and users alike.</li>
+       
+                       </ul>
+        </section>
+    </div>
+
+       <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>My Hobbies:</p>
+        <ul>
+            <li>Watching Movies</li>
+<li>Swimming</li>
+
+      </ul>
+    </section>
+
+
+
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contact-info">
+    <h2>My Contact Information</h2>
+    
+
+
+
+ 
+
+    <!-- Contact Card Container -->
+    <div class="contact-card">
+        <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:iserenannet@gmail.com">iserenannet@gmail.com</a></p>
+        </div>
+        
+        <div class="contact-item">
+            <h3>Phone</h3>
+            <p>+256777742240</p>
+        </div>
+
+                <div class="contact-item">
+        <h3>Location</h3>
+        <p>Kampala Uganda</p>
+    </div>
+</section>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top">↑ Top</a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Biography of Annet Iseren. All rights reserved. </p>
+    </footer>
+
+</body>
+</html>

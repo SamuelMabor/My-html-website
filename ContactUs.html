@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+            height: 120px;
+        }
+
+        .subnav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .subnav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        .subnav a:hover {
+            border-bottom: 2px solid #007bff;
+        }
+
+        .subnav a[href="#contact-us"] {
+            border-bottom: 2px solid #007bff;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 36px;
+            color: #002366;
+        }
+
+        .contact-header p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info {
+            text-align: left;
+            margin: 30px auto;
+            max-width: 600px;
+            color: #555;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            color: #002366;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="VU Logo.JFIF" alt="Logo">
+        </div>
+        <nav class="subnav">
+            <a href="TestingProfile.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Participants.html">Participants</a>
+            <a href="Contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Please fill out the form below or reach us directly through our contact details.</p>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p><strong>Email:</strong> <a href="mailto:info@website.com">info@website.com</a></p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Address:</strong> 123 Street Name, City, Country</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+    <footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Web Spartans Group | All Rights Reserved</p>
+        <div class="footer-links">
+            <a href="TestingProfile.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Participants.html">Participants</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+
+</html>
