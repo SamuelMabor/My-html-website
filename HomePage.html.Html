@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Technology Coursework</title>
+    <style>
+
+   .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container form {
+    display: flex;
+    gap: 20px;
+}
+
+.search-container input {
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 450px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+        body {
+            font-family: Arial Narrow;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+            height: 120px;
+        }
+
+        .subnav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .subnav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            padding: 10px 10px;
+            position: relative;
+        }
+
+        .subnav a:hover {
+            border-bottom: 2px solid #007bff;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Display dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+         .hero {
+            text-align: center;
+            background-image: url('Ourbackground.jfif'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 200px 250px;
+            border-radius: 25px;
+            margin: 20px auto;
+            max-width: 900px;
+            color: White; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+        }
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta-buttons .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 10px;
+            display: inline-block;
+            text-align: center;
+color:white:
+        }
+
+        .btn-primary {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #000;
+        }
+
+        .about-us {
+            padding: 4rem 2rem;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-us p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 0 auto 2rem;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            width: 30%;
+            background: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature .icon img {
+   display: block;
+            width: 250px;
+            height: auto;
+            margin: 1rem auto;
+            border-radius: 50%;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+}
+
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* FAQ Section */
+        #faqs {
+            padding: 3rem 2rem;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 1rem;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            padding: 3rem 2rem;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sign Up Form Section */
+        #sign-up {
+            padding: 3rem 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .sign-up-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sign-up-form h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .sign-up-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .sign-up-form input,
+        .sign-up-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .sign-up-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sign-up-form button:hover {
+            background-color: #0056b3;
+        }
+
+/* Gallery Styling */
+#gallery {
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Hover Effect with Motion */
+.gallery-images img:hover {
+    transform: scale(1.1) rotate(3deg); /* Smooth zoom and slight rotation */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+}
+
+footer {
+            background-color: cyan;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            text-align: center;
+        }
+
+        .footer-logo img {
+            height: 120px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .footer-content div {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-content h4 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .footer-content p, .footer-content a {
+            font-size: 14px;
+            color: Dark Blue;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .footer-bottom {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="VU Logo.JFIF" alt="Logo">
+        </div>
+        <nav class="subnav">
+    <form action="#" method="GET">
+        <input type="text" placeholder="Search..." name="search" required>
+        <button type="submit">Search</button>
+    </form>
+
+            <a href="HomePage.html">Home</a>
+            <a href="About.html" style="border-bottom: 2px solid #007bff;">About Us</a>
+            <a href="Participants.html">Participants</a>
+            <div class="dropdown">
+                <button class="dropbtn">Contact Us</button>
+                <div class="dropdown-content">
+                    <a href="#gallery">Gallery</a>
+                    <a href="#faqs">FAQs</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Internet Technology And Web Design Coursework</h1>
+            <p>
+                We are a team of dedicated professionals driven by creativity, innovation, and passion.
+            </p>
+            <div class="cta-buttons">
+                <a href="About.html" class="btn btn-primary">Learn More</a>
+                <a href="#sign-up" class="btn btn-secondary">Sign Up</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="about-us">
+            <div class="container">
+                <h2>About Our Group</h2>
+                <p>
+                    Welcome to "The Home of Creativity!", We are a team of dedicated professionals driven by creativity, innovation, and passion. Our mission is to deliver exceptional solutions tailored to your needs, from website design and development to creative strategies that bring your ideas to life. Collaboration and quality define who we are.
+                </p>
+                <div class="about-features">
+    <div class="feature">
+        <div class="icon">
+            <img src="Gallery8.JPG" alt="Innovative Solutions Icon">
+        </div>
+        <h3>Innovative Solutions</h3>
+        <p>We push boundaries to create cutting-edge designs and strategies for your business.</p>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="Gallery8.JPG" alt="Team Collaboration Icon">
+        </div>
+        <h3>Team Collaboration</h3>
+        <p>Our group thrives on teamwork, combining diverse skills to achieve greatness.</p>
+    </div>
+</div>
+            </div>
+        </section>
+<Fieldset>  
+        <!-- Sign Up Form Section -->
+      <section id="sign-up">
+            <div class="sign-up-form">
+                <h2>Sign Up for Our Newsletter</h2>
+                <form action="#" method="POST">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+</legend></Fieldset>
+        </section>
+<Fieldset>
+
+        <!-- FAQ Section -->
+        <section id="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How can I contact your team?</h3>
+                <p>Simply contact us via the 'Contact Us' page, and we’ll set up a consultation.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for web development?</h3>
+                <p>We follow a structured process: Planning, Design, Development, Testing, and Launch.</p>
+            </div>
+        </section>
+</Fieldset>
+        <!-- Gallery Section -->
+        <section id="gallery">
+<Fieldset><Legend>
+            <h2>Our Gallery</h2>
+            <div class="gallery-images">
+                <img src="Gallery8.JPG" alt="Gallery8">
+                <img src="Gallery9.JPG" alt="Gallery9">
+                <img src="Gallery10.JFIF" alt="Gallery10">
+ <img src="Gallery1.JPEG" alt="Gallery1">
+ <img src="Gallery2.JPEG" alt="Gallery2">
+ <img src="Gallery3.JPEG" alt="Gallery3">
+<img src="Gallery4.JPEG" alt="Gallery4">
+<img src="Gallery5.JPEG" alt="Gallery5">
+<img src="Gallery6.JPEG" alt="Gallery6">
+<img src="Gallery7.PNG" alt="Gallery7">
+
+               
+            </div>
+        </section></Legend></Fieldset>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="VU Logo.JFIF" alt="Logo">
+            </div>
+
+            <!-- Footer Content Section -->
+            <div class="footer-content">
+                <div>
+                    <h4>Web Spartans Group</h4>
+<p>We push boundaries to create cutting-edge designs and strategies for your business.</p><br>
+<p>Our group thrives on teamwork, combining diverse skills to achieve greatness.</p><br>
+
+
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>Address:<br>
+                        Victoria University Kampala </p>
+                    <p>Contact:<br>
+                        Tel: +256774455126<br>
+                        Email: <a href="mailto:info@webspartans.com">info@webspartans.com</a></p>
+                </div>
+                <div>
+                    <h4>Useful Links</h4>
+                    <p><a href="HomePage.html">Home</a>
+            
+            </p>
+                    <p><a href="About.html">About Us</a></a></p>
+                    <p><a href="Participants.html">Participants</a></a></p>
+                   
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+
+          
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2024 Web Spartans Group. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</html>
